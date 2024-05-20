@@ -1,0 +1,19 @@
+DROP DATABASE IF EXISTS api_publicaciones;
+
+CREATE DATABASE api_publicaciones CHARSET utf8mb4;
+
+USE api_publicaciones;
+
+
+CREATE TABLE publicaciones(
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    texto VARCHAR(500) NOT NULL,
+titulo VARCHAR(200) NOT NULL,
+canti_likes INT(11) NOT NULL,
+    id_usuario INT(11) NOT NULL,
+    PRIMARY KEY (id)
+); 
+
+INSERT INTO publicaciones (texto, titulo, canti_likes, id_usuario) VALUES 
+('Este es el primer ejemplo de publicación', 'Primer ejemplo', 10, 1),
+('Aquí va el segundo ejemplo de publicación', 'Segundo ejemplo', 20, 2);
